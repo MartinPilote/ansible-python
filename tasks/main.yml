@@ -1,0 +1,17 @@
+---
+- include_vars: "{{ ansible_distribution }}.yml"
+
+- name: Install package
+  package:
+    state: latest
+    name: "{{packages}}"
+
+- name: Install pip packaging
+  tags: bpytop,packages,pip,python
+  pip:
+    executable: /usr/bin/pip3
+    state: latest
+    name:
+      - packaging
+      - docker-py
+...
