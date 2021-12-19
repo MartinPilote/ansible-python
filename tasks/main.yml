@@ -9,10 +9,8 @@
 - name: Install pip packaging
   tags: bpytop,packages,pip,python
   pip:
-    executable: /usr/bin/pip3
+    executable: pip3
     state: latest
     name:
       - packaging
-      - docker-py
-      - zmq
 ...
